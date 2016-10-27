@@ -1,0 +1,19 @@
+{
+  "posts" : [
+      {
+          "id": 1,
+          "title": "whos that writer",
+          "desc": "Ormai l'inverno del nostro scontento s'è fatto estate sfolgorante ai raggi di questo sole di York."
+      },
+      {
+          "id": 2,
+          "title": "Dostoeskij",
+          "desc": "La bellezza salverà il mondo"
+      },
+      {
+          "id": 3,
+          "title": "Victor Hugo",
+          "desc": "blah blah e bla bla"
+      }
+  ]
+}

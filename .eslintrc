@@ -1,0 +1,18 @@
+{
+    "extends": "@wyscout/eslint-config-wyscout",
+    "rules": {
+        "max-len": 0,
+        "react/jsx-indent": 0,
+        "react/jsx-closing-bracket-location": 0,
+        "react/jsx-no-bind": 0,
+        "react/no-string-refs": 0,
+        "react/no-param-reassign": 0,
+        "react/self-closing-comp": 0,
+        "react/prop-types": 0,
+        "no-return-assign": 0,
+        "no-console": 0,
+        "consistent-return": 0,
+        "default-case": 0,
+        "no-unreachable": 0
+    }
+}
