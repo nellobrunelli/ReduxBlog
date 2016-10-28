@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../actions/index';
 class PostsIndex extends React.Component {
@@ -17,9 +18,23 @@ class PostsIndex extends React.Component {
         }) : null;
     }
 
+    getButtonNew = () => {
+        return (
+            <Link
+                to="/post/new"
+                className="btn btn-primary"
+            >
+                {'Add a Post'}
+            </Link>
+        );
+    }
+
     render = () => {
         return (
-            <div>{this.getPosts()}</div>
+            <div>
+                {this.getButtonNew()}
+                {this.getPosts()}
+            </div>
         );
     }
 }
