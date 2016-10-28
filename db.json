@@ -15,5 +15,6 @@
           "title": "Victor Hugo",
           "desc": "blah blah e bla bla"
       }
-  ]
+  ],
+  "selectedPosts" : []
 }

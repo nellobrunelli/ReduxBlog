@@ -1,5 +1,9 @@
 import * as type from '../constant/ActionTypes';
-const STATE_DEFAULT = {all: [], post: null};
+const STATE_DEFAULT = {
+    all: [],
+    selectedPost: [],
+    post: null
+};
 
 export default function(state = STATE_DEFAULT, action) {
     switch (action.type) {
