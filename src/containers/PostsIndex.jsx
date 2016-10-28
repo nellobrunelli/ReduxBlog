@@ -8,14 +8,19 @@ class PostsIndex extends React.Component {
     }
 
     getPosts = () => {
-        return this.props.posts ? this.props.posts.all.map(post => {
+        return this.props.posts.all ? this.props.posts.all.map(post => {
             return (
                 <div key={post.id}>
-                    <h4>{`post id ${post.id}  - ${post.title}`}</h4>
+                    <h4>{`post id ${post.id} - ${post.title}`}</h4>
                     {post.desc}
                 </div>
             );
-        }) : null;
+        }) : (
+            <div>
+                <div>{'No posts: have you run the json server?'}</div>
+                <div>{'from shall :'}<code>{'json-server db.json'}</code></div>
+            </div>
+        );
     }
 
     getButtonNew = () => {
