@@ -15,9 +15,9 @@ export function fetchPosts() {
     };
 }
 
-export function selectPost(post) {
+export function togglePostSelection(post) {
     return {
-        type: type.SELECT_POST,
+        type: type.SET_POST_SELECTION,
         payload: post
     };
 }

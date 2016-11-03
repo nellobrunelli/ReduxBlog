@@ -1,7 +1,7 @@
 import * as type from '../constant/ActionTypes';
 const STATE_DEFAULT = {
     all: [],
-    selected: [] // @TODO: make it dynamic
+    selected: []
 };
 
 export default function(state = STATE_DEFAULT, action) {
@@ -9,14 +9,13 @@ export default function(state = STATE_DEFAULT, action) {
         case type.FETCH_POSTS:
             return {
                 ...state,
-                all: action.payload.data,
-                selected: [1, 3]
+                all: action.payload.data
             };
-        case type.SELECT_POST:
-            // @TODO: make it dynamic
+        case type.SET_POST_SELECTION:
+            let toggle = state.selected.find(el => el === action.payload.id);
             return {
                 ...state,
-                selected: []
+                selected: toggle ? state.selected.filter(el => el !== action.payload.id) : state.selected.concat(action.payload.id)
             };
         default:
             return state;

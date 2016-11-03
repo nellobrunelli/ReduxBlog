@@ -1,17 +1,32 @@
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
-import { fetchPosts } from '../actions/index';
+import { fetchPosts, togglePostSelection } from '../actions/index';
 class PostsIndex extends React.Component {
 
     componentWillMount = () => {
         this.props.fetchPosts();
     }
 
+    state = {
+        posts: []
+    }
+
+    togglePostSelection = (post) => {
+        this.props.togglePostSelection(post);
+    }
+
     getPosts = () => {
         return this.props.posts.all ? this.props.posts.all.map(post => {
             return (
                 <div key={post.id}>
-                    <h4>{`post id ${post.id} - ${post.title}`}</h4>
+                    <h4>
+                        <input
+                            type="checkbox"
+                            value=""
+                            onClick={() => {this.togglePostSelection(post);}}
+                        />
+                        {`post id ${post.id} - ${post.title}`}
+                    </h4>
                     {post.desc}
                 </div>
             );
@@ -50,4 +65,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps, {fetchPosts: fetchPosts})(PostsIndex);
+export default connect(mapStateToProps, {fetchPosts: fetchPosts, togglePostSelection: togglePostSelection})(PostsIndex);
