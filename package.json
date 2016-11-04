@@ -6,7 +6,7 @@
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
     "start": "webpack-dev-server --inline --host 0.0.0.0",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
+    "test": "mocha --compilers js:babel-register --recursive",
     "lint": "eslint app --ext .js, .jsx || true",
     "test:watch": "npm run test -- --watch",
     "check": "npm-check -u"
@@ -36,6 +36,7 @@
     "@wyscout/eslint-config-wyscout": "^3.0.4",
     "axios": "^0.15.2",
     "babel-preset-stage-1": "^6.1.18",
+    "expect": "^1.20.2",
     "lodash": "^4.16.6",
     "npm-check": "^5.4.0",
     "react": "^15.3.2",
