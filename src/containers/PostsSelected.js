@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import SelectorPostsSelected from '../selectors/SelectorPostsSelected';
+import _ from 'lodash';
 
 class PostsSelected extends React.Component {
 
@@ -8,7 +9,7 @@ class PostsSelected extends React.Component {
     )
 
     getPosts = () => {
-        return this.props.posts.map(post => {
+        return _.map(this.props.posts, post => {
             return (
                 <div key={post.id}>
                     <h4>{`post id ${post.id} - ${post.title}`}</h4>

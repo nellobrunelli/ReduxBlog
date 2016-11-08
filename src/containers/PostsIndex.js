@@ -1,6 +1,8 @@
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { fetchPosts, togglePostSelection } from '../actions/index';
+import _ from 'lodash';
+
 class PostsIndex extends React.Component {
 
     componentWillMount = () => {
@@ -16,7 +18,7 @@ class PostsIndex extends React.Component {
     }
 
     getPosts = () => {
-        return this.props.posts.all ? this.props.posts.all.map(post => {
+        return this.props.posts.all ? _.map(this.props.posts.all, post => {
             return (
                 <div key={post.id}>
                     <h4>

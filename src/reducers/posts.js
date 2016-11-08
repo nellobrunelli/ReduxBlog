@@ -1,6 +1,8 @@
+import _ from 'lodash';
+
 import * as type from '../constant/ActionTypes';
 const STATE_DEFAULT = {
-    all: [],
+    all: {},
     selected: []
 };
 
@@ -9,7 +11,7 @@ export default function(state = STATE_DEFAULT, action) {
         case type.FETCH_POSTS:
             return {
                 ...state,
-                all: action.payload.data
+                all: _.mapKeys(action.payload.data, 'id')
             };
         case type.SET_POST_SELECTION:
             let toggle = state.selected.find(el => el === action.payload.id);
