@@ -20,7 +20,8 @@ Checkout this repo, install dependencies, then start the gulp process with the f
 	npm start
 ```
 
-####Run the json server as soon as you start mockup rest#####
+## Run the json server as soon you need fake rests
+
 ```
-	json-server db.json
+	npm run rest
 ```

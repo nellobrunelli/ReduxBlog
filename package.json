@@ -7,6 +7,7 @@
   "scripts": {
     "start": "webpack-dev-server --inline --host 0.0.0.0",
     "test": "mocha --compilers js:babel-register --recursive",
+    "rest": "./node_modules/.bin/json-server db.json",
     "lint": "eslint app --ext .js, .jsx || true",
     "build:dev": "webpack -w --config webpack.config.js",
     "build": "NODE_ENV=production webpack --config webpack.config.production.js",
@@ -29,6 +30,7 @@
     "eslint-plugin-react": "^6.6.0",
     "jquery": "^3.1.1",
     "jsdom": "^9.8.3",
+    "json-server": "^0.9.4",
     "mocha": "^3.1.2",
     "react-addons-test-utils": "^15.3.2",
     "webpack": "^1.13.3",
